@@ -1,0 +1,18 @@
+public class ObjectContainerTest {
+
+    public static void main(String[] args) {
+        // 1
+        ObjectContainer container = new ObjectContainer();
+        // 2
+        Person p = new Person("Jim ", "Panse");
+        container.store(p);
+        // 3
+        Object element = container.get();
+        // 4
+        
+        System.out.println(element);
+        System.out.println(((Person) element).getFirstName());
+        //element.getFirstName(); would trigger Exception, getFirstName is undefined for the type Object.
+        ((Person) element).getFirstName();
+    }
+}
