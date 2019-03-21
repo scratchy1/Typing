@@ -1,0 +1,12 @@
+public class ObjectContainer  {
+    private Object element;
+    
+    
+    public void store(Object element) {
+        this.element = element;
+    }
+
+    Object get() {
+        return element;
+    }
+}
